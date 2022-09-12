@@ -1,28 +1,22 @@
-# The Cayman theme
+# The Cayman theme - dark version
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/cayman/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/cayman/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
-
-*Cayman is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/cayman), or even [use it today](#usage).*
+Based on [lewismiddleton/cayman-dark](https://github.com/lewismiddleton/cayman-dark) with updates from [pages-themes/cayman](https://github.com/pages-themes/cayman) including support for `head-custom.html`.
 
 ![Thumbnail of Cayman](thumbnail.png)
 
 ## Usage
 
-To use the Cayman theme:
-
-1. Add the following to your site's `_config.yml`:
+To use this theme add the following to your site's `_config.yml`:
 
     ```yml
-    remote_theme: pages-themes/cayman@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
+    remote_theme: Dersei/cayman-dark
     ```
-
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
-
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+By default pages will be in dark mode. To make specific page use light mode include the following code at the top of your markdown files:
+```ymls
+---
+light_mode: true
+---
+```
 
 ## Customizing
 
@@ -88,29 +82,3 @@ Templates often rely on URLs supplied by GitHub such as links to your repository
 *Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
 
 For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
-
-## Roadmap
-
-See the [open issues](https://github.com/pages-themes/cayman/issues) for a list of proposed features (and known issues).
-
-## Project philosophy
-
-The Cayman theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
-
-## Contributing
-
-Interested in contributing to Cayman? We'd love your help. Cayman is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
-
-### Previewing the theme locally
-
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
-
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/cayman`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
-
-### Running tests
-
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
