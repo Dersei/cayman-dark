@@ -8,9 +8,9 @@ Based on [lewismiddleton/cayman-dark](https://github.com/lewismiddleton/cayman-d
 
 To use this theme add the following to your site's `_config.yml`:
 
-    ```yml
+```yml
     remote_theme: Dersei/cayman-dark
-    ```
+```
 By default pages will be in dark mode. To make specific page use light mode include the following code at the top of your markdown files:
 ```ymls
 ---
